@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media Queries 소개 - 우리팀 웹개발 프로젝트</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        background-color: #4e89ae;
+        color: white;
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
+
+      nav {
+        background: #1f3a5f;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        color: white;
+        padding: 1rem;
+        display: block;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background: #416788;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 1rem;
+        overflow-x: auto;
+        border-radius: 8px;
+      }
+
+      footer {
+        background: #1f3a5f;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Media Queries 소개</h1>
+      <p>반응형 웹 디자인의 핵심 도구</p>
+    </header>
+
+    <nav>
+      <a href="../index.html">홈</a>
+      <a href="../team.html">팀 소개</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+      <a href="media-queries.html">Media Query</a>
+      <a href="flexbox-grid.html">Flex/Grid</a>
+    </nav>
+
+    <section>
+      <h2>📱 Media Queries란?</h2>
+      <p>
+        Media Query는 디바이스의 너비, 높이, 해상도 등에 따라 웹 페이지의
+        스타일을 동적으로 변경할 수 있도록 하는 **CSS 기술**입니다. 즉, 하나의
+        웹페이지로 데스크탑, 태블릿, 모바일 등 다양한 화면에 맞게 **반응형 웹을
+        구현**할 수 있습니다.
+      </p>
+
+      <h2>💡 기본 문법</h2>
+      <pre><code>
+@media (조건) {
+  CSS 코드
+}
+      </code></pre>
+
+      <h3>예제:</h3>
+      <pre><code>
+/* 기본 스타일 (데스크탑) */
+body {
+  font-size: 18px;
+}
+
+/* 768px 이하인 경우 (모바일) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+      </code></pre>
+
+      <h2>🛠️ 주요 조건들</h2>
+      <ul>
+        <li><code>max-width</code>: 최대 너비</li>
+        <li><code>min-width</code>: 최소 너비</li>
+        <li><code>orientation</code>: 화면 방향 (세로/가로)</li>
+        <li><code>resolution</code>: 화면 해상도</li>
+      </ul>
+
+      <h2>🖥️ 실제 적용 예시</h2>
+      <p>네비게이션 바를 세로 방향으로 변경하는 예:</p>
+      <pre><code>
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+}
+      </code></pre>
+    </section>
+
+    <footer>
+      <p>© 2025 우리팀 웹개발 프로젝트</p>
+    </footer>
+  </body>
+</html>

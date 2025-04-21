@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>네비게이션 바 - 우리팀 웹개발 프로젝트</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        background-color: #4e89ae;
+        color: white;
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
+
+      nav {
+        background: #1f3a5f;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        color: white;
+        padding: 1rem;
+        display: block;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+
+      nav a:hover {
+        background: #416788;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 1rem;
+        overflow-x: auto;
+        border-radius: 8px;
+      }
+
+      footer {
+        background: #1f3a5f;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>네비게이션 바 (Navbar)</h1>
+      <p>웹사이트 간편 탐색을 위한 핵심 UI 요소</p>
+    </header>
+
+    <nav>
+      <a href="../index.html">홈</a>
+      <a href="../team.html">팀 소개</a>
+      <a href="../tech/html.html">HTML</a>
+      <a href="../tech/css.html">CSS</a>
+      <a href="../features/responsive.html">반응형 레이아웃</a>
+      <a href="../features/navbar.html">네비게이션 바</a>
+    </nav>
+
+    <section>
+      <h2>📌 네비게이션 바란?</h2>
+      <p>
+        네비게이션 바(Navigation Bar)는 웹사이트에서 사용자가 각 페이지나
+        섹션으로 **이동할 수 있게 해주는 메뉴 영역**입니다. 사이트 구조를
+        직관적으로 파악할 수 있도록 하며, 사용자 경험(UX)을 향상시키는 핵심
+        요소입니다.
+      </p>
+
+      <h2>🛠️ 기본 구조</h2>
+      <pre><code>
+&lt;nav&gt;
+  &lt;a href="#home"&gt;홈&lt;/a&gt;
+  &lt;a href="#about"&gt;소개&lt;/a&gt;
+  &lt;a href="#contact"&gt;문의&lt;/a&gt;
+&lt;/nav&gt;
+      </code></pre>
+
+      <h2>🎨 스타일링 예시</h2>
+      <pre><code>
+nav {
+  background: #1f3a5f;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #416788;
+}
+      </code></pre>
+
+      <h2>📱 반응형 네비게이션</h2>
+      <p>
+        화면 너비가 좁아질 경우, 네비게이션 바가 세로 방향으로 정렬되도록 설정할
+        수 있습니다:
+      </p>
+      <pre><code>
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+}
+      </code></pre>
+
+      <h2>✅ 우리 프로젝트 적용 모습</h2>
+      <ul>
+        <li>사이트 모든 페이지 상단에 고정된 nav 메뉴 구현</li>
+        <li>CSS Flexbox를 활용한 가로 정렬</li>
+        <li>Media Query를 통한 반응형 구성</li>
+        <li>마우스 오버 시 배경색 변경 효과 추가</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 우리팀 웹개발 프로젝트</p>
+    </footer>
+  </body>
+</html>

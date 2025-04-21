@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>팀원 포트폴리오 연결 - 우리팀 웹개발 프로젝트</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        background-color: #4e89ae;
+        color: white;
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
+
+      nav {
+        background: #1f3a5f;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        color: white;
+        padding: 1rem;
+        display: block;
+        text-decoration: none;
+        transition: background 0.3s;
+      }
+
+      nav a:hover {
+        background: #416788;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .member {
+        background: #f4f4f4;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+
+      .member a {
+        color: #2a5d9f;
+        text-decoration: none;
+        margin-right: 1rem;
+      }
+
+      .member a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background: #1f3a5f;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>팀원 포트폴리오 연결</h1>
+      <p>GitHub 및 포트폴리오 사이트를 통한 실력 공개</p>
+    </header>
+
+    <nav>
+      <a href="../index.html">홈</a>
+      <a href="../team.html">팀 소개</a>
+      <a href="../tech/html.html">HTML</a>
+      <a href="../tech/css.html">CSS</a>
+      <a href="../features/responsive.html">반응형 레이아웃</a>
+      <a href="../features/navbar.html">네비게이션 바</a>
+      <a href="../features/portfolio.html">포트폴리오 연결</a>
+    </nav>
+
+    <section>
+      <h2>📌 소개</h2>
+      <p>
+        팀원별 포트폴리오와 GitHub 주소를 홈페이지에 연결하여, 방문자가 각
+        팀원의 역량과 작업물을 손쉽게 확인할 수 있도록 구성하였습니다. 이는 협업
+        능력뿐만 아니라 개인 기술력도 함께 어필할 수 있는 좋은 방법입니다.
+      </p>
+
+      <h2>👨‍💻 팀원 예시</h2>
+
+      <div class="member">
+        <h3>김민석</h3>
+        <p>프론트엔드 개발 담당</p>
+        <a href="https://github.com/ms020704" target="_blank">GitHub</a>
+        <a href="#" target="_blank">포트폴리오 사이트</a>
+      </div>
+
+      <h2>🛠️ 구현 방식</h2>
+      <ul>
+        <li><code>&lt;a href&gt;</code> 태그를 통해 외부 페이지 연결</li>
+        <li>
+          링크에 <code>target="_blank"</code> 속성을 사용해 새 탭에서 열림
+        </li>
+        <li>기본 스타일 유지 + 링크 hover 효과로 사용자 편의성 향상</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 우리팀 웹개발 프로젝트</p>
+    </footer>
+  </body>
+</html>

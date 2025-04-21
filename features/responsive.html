@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>반응형 레이아웃 - 우리팀 웹개발 프로젝트</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        background-color: #4e89ae;
+        color: white;
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
+
+      nav {
+        background: #1f3a5f;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        color: white;
+        padding: 1rem;
+        display: block;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background: #416788;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 1rem;
+        overflow-x: auto;
+        border-radius: 8px;
+      }
+
+      .responsive-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .box {
+        background: #ddd;
+        padding: 2rem;
+        flex: 1 1 30%;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .box {
+          flex: 1 1 100%;
+        }
+
+        nav {
+          flex-direction: column;
+        }
+      }
+
+      footer {
+        background: #1f3a5f;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>반응형 레이아웃</h1>
+      <p>모바일과 데스크탑 모두에서 최적의 사용자 경험 제공</p>
+    </header>
+
+    <nav>
+      <a href="/index.html">홈</a>
+      <a href="/team.html">팀 소개</a>
+      <a href="/features/responsive.html">반응형 레이아웃</a>
+      <a href="/features/navbar.html">네비게이션 바</a>
+      <a href="portfolio.html">팀원 포트폴리오</a>
+    </nav>
+
+    <section>
+      <h2>📱 반응형 웹이란?</h2>
+      <p>
+        반응형 웹(Responsive Web Design)은 다양한 디바이스 크기(데스크탑,
+        태블릿, 모바일)에 따라 자동으로 레이아웃이 조절되도록 설계된 웹사이트를
+        의미합니다. 사용자가 어떤 기기를 사용하든지 최적화된 화면을 제공합니다.
+      </p>
+
+      <h2>💡 주요 구현 기술</h2>
+      <ul>
+        <li><strong>Media Queries</strong>를 이용한 화면 크기 감지</li>
+        <li><strong>Flexbox 또는 Grid</strong>로 유동적인 레이아웃 구성</li>
+        <li>
+          <strong>퍼센트 단위</strong> 또는 <code>vw</code>,
+          <code>vh</code> 단위 활용
+        </li>
+      </ul>
+
+      <h2>🔧 예시 코드</h2>
+      <pre><code>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1 1 30%;
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 100%;
+  }
+}
+      </code></pre>
+
+      <h2>🧪 시연 박스</h2>
+      <div class="responsive-box">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 우리팀 웹개발 프로젝트</p>
+    </footer>
+  </body>
+</html>

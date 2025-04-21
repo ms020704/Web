@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>생성형 AI - 우리팀 웹개발 프로젝트</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        background-color: #4e89ae;
+        color: white;
+        padding: 1.5rem 2rem;
+        text-align: center;
+      }
+
+      nav {
+        background: #1f3a5f;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        color: white;
+        padding: 1rem;
+        display: block;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background: #416788;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+
+      footer {
+        background: #1f3a5f;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>생성형 AI 소개</h1>
+      <p>Generative AI의 원리와 활용 예시</p>
+    </header>
+
+    <nav>
+      <a href="../index.html">홈</a>
+      <a href="../team.html">팀 소개</a>
+      <a href="portfolio.html">포트폴리오 연결</a>
+      <a href="generative-ai.html">생성형 AI</a>
+    </nav>
+
+    <section>
+      <h2>🤖 생성형 AI란?</h2>
+      <p>
+        생성형 AI(Generative AI)는 텍스트, 이미지, 음악 등 콘텐츠를
+        <strong>직접 생성할 수 있는 인공지능 기술</strong>입니다.<br />
+        대표적으로 OpenAI의 GPT, DALL·E, Google의 Imagen 등이 있습니다.
+      </p>
+
+      <h2>💬 텍스트 생성 예시 (GPT)</h2>
+      <p>아래는 GPT 모델이 "봄에 어울리는 한 문장"을 생성한 결과입니다:</p>
+      <pre><code>봄바람이 불어오면 마음도 함께 살랑거린다.</code></pre>
+
+      <!-- 시뮬레이션 체험 -->
+      <section>
+        <h2>🧪 생성형 AI 시뮬레이션 체험</h2>
+
+        <!-- 텍스트 생성 시뮬레이션 -->
+        <div style="margin-bottom: 2rem">
+          <h3>📝 텍스트 생성 시뮬레이션</h3>
+          <p>주제를 입력하면 GPT가 문장을 만들어줍니다:</p>
+          <input
+            type="text"
+            id="textPrompt"
+            placeholder="예: 봄, 고양이, 미래 등"
+          />
+          <button onclick="simulateText()">생성하기</button>
+          <pre id="textResult">여기에 결과가 나타납니다...</pre>
+        </div>
+      </section>
+
+      <h2>🖼️ 이미지 생성 예시 (DALL·E)</h2>
+      <p>프롬프트: “노을 지는 하늘 아래 벚꽃길을 걷는 고양이”</p>
+      <img
+        src="https://gptonline.ai/images/sakura-cat-demo.jpg"
+        alt="AI 이미지 예시"
+      />
+
+      <!-- 이미지 생성 시뮬레이션 -->
+      <div>
+        <h3>🖼️ 이미지 생성 시뮬레이션</h3>
+        <p>프롬프트를 입력해보세요 (예: 고양이, 벚꽃, 우주, 바다 등)</p>
+        <input type="text" id="imagePrompt" placeholder="프롬프트 입력" />
+        <button onclick="simulateImage()">이미지 생성</button>
+        <p style="font-size: 0.9rem; color: gray; margin-top: 0.5rem">
+          예시 프롬프트: <em>고양이</em>, <em>벚꽃</em>, <em>우주</em>,
+          <em>바다</em>
+        </p>
+        <div id="imageContainer" style="margin-top: 1rem">
+          <img
+            id="simulatedImage"
+            src=""
+            alt="생성된 이미지"
+            style="display: none; max-width: 100%; border-radius: 8px"
+          />
+        </div>
+      </div>
+
+      <h2>🧠 생성형 AI의 활용 분야</h2>
+      <ul>
+        <li>ChatGPT와 같은 대화형 챗봇</li>
+        <li>AI 그림 도구 (예: DALL·E, Midjourney)</li>
+        <li>자동 뉴스 생성, 보고서 요약</li>
+        <li>음악 작곡, 광고 문구 제작 등</li>
+      </ul>
+
+      <h2>🔗 직접 체험해보기</h2>
+      <p>아래 사이트에서 실제 생성형 AI를 체험해보세요!</p>
+      <ul>
+        <li>
+          <a href="https://gptonline.ai/ko/" target="_blank"
+            >GPT온라인 - 한국어 전용 GPT 체험</a
+          >
+        </li>
+        <li>
+          <a href="https://openai.com/dall-e" target="_blank">DALL·E 데모</a>
+        </li>
+        <li><a href="https://platform.openai.com/docs/overview">Open AI</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 우리팀 웹개발 프로젝트</p>
+    </footer>
+
+    <script>
+      function simulateText() {
+        const prompt = document.getElementById('textPrompt').value.toLowerCase()
+        const result = document.getElementById('textResult')
+        const responses = {
+          봄: '봄바람이 불어오면 마음도 함께 살랑거린다.',
+          고양이: '창가에 앉은 고양이는 햇살 속에서 졸고 있었다.',
+          미래: '미래는 우리가 만들어가는 또 하나의 현재다.',
+          우주: '끝없는 우주 속에서도 우리의 삶은 소중하다.',
+        }
+
+        if (!prompt.trim()) {
+          result.textContent = '프롬프트를 입력해주세요!'
+          return
+        }
+
+        result.textContent =
+          responses[prompt] || `"${prompt}"에 대한 문장을 준비 중입니다...`
+      }
+
+      function simulateImage() {
+        const prompt = document
+          .getElementById('imagePrompt')
+          .value.toLowerCase()
+        const image = document.getElementById('simulatedImage')
+        let imgUrl = ''
+
+        if (prompt.includes('고양이')) {
+          imgUrl = 'https://gptonline.ai/images/sakura-cat-demo.jpg'
+        } else if (prompt.includes('벚꽃')) {
+          imgUrl = 'https://images.unsplash.com/photo-1556780903-1f28180b16ae'
+        } else if (prompt.includes('우주')) {
+          imgUrl =
+            'https://images.unsplash.com/photo-1477201085229-4d7d2aef5fa5'
+        } else if (prompt.includes('바다')) {
+          imgUrl =
+            'https://images.unsplash.com/photo-1507525428034-b723cf961d3e'
+        } else {
+          imgUrl =
+            'https://images.unsplash.com/photo-1499084732479-de2c02d45fc4'
+        }
+
+        image.src = imgUrl
+        image.style.display = 'block'
+      }
+    </script>
+  </body>
+</html>
