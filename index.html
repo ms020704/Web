@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>우리팀 웹개발 프로젝트</title>
     <style>
+      /*🗣️ 설명:
+전체 페이지의 기본 글꼴을 설정하고, 여백(margin, padding)을 제거해서 깔끔한 레이아웃을 만듭니다.
+줄 간격(line-height)과 글자 색(color)을 설정해서 가독성을 높였습니다.*/
       body {
         font-family: 'Segoe UI', sans-serif;
         margin: 0;
@@ -13,6 +16,10 @@
         color: #333;
       }
 
+      /*🗣️ 설명:
+페이지 상단 헤더 영역을 파란색 배경과 흰색 텍스트로 강조했습니다.
+패딩을 이용해 공간을 주고, 중앙 정렬로 제목을 눈에 잘 띄게 했습니다.
+*/
       header {
         background-color: #4e89ae;
         color: white;
@@ -20,6 +27,9 @@
         text-align: center;
       }
 
+      /*🗣️ 설명:
+메뉴를 Flexbox로 가로 정렬하고, 작은 화면에서는 자동으로 줄바꿈되게 했습니다.
+메뉴 항목은 흰색 글자, 패딩으로 넉넉한 클릭 영역 제공, 마우스를 올렸을 때 hover 효과로 반응성을 줬어요.*/
       nav {
         background: #1f3a5f;
         display: flex;
@@ -38,12 +48,18 @@
         background: #416788;
       }
 
+      /*🗣️ 설명:
+본문 콘텐츠를 중앙에 배치하고 양쪽 여백을 줘서 읽기 편하게 했습니다.
+max-width로 너무 넓어지지 않도록 제한해서 레이아웃을 정돈했어요.*/
       section {
         padding: 2rem;
         max-width: 1000px;
         margin: auto;
       }
 
+      /*🗣️ 설명:
+팀 멤버 정보를 카드 형태로 예쁘게 보여주기 위한 스타일입니다.
+배경색, 패딩, 여백, 모서리 둥글기를 통해 구역을 깔끔하게 나눴어요.*/
       .team-member {
         background: #f1f1f1;
         padding: 1rem;
@@ -51,6 +67,8 @@
         border-radius: 10px;
       }
 
+      /*🗣️ 설명:
+이미지는 구역을 넘지 않게 하고, 살짝 둥글게 처리해서 부드러운 인상을 줍니다.*/
       .features img {
         max-width: 100%;
         border-radius: 8px;
@@ -64,6 +82,8 @@
         margin-top: 2rem;
       }
 
+      /*🗣️ 설명:
+모바일이나 작은 화면에서는 메뉴가 세로로 쌓이게 해서 사용자 경험을 높였습니다.*/
       @media (max-width: 768px) {
         nav {
           flex-direction: column;
